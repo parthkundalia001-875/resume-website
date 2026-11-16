@@ -113,10 +113,20 @@ section { padding-top: var(--s3); }
 .button:hover { background: var(--ink); border-color: var(--ink); color: var(--bg); }
 .actions { display: flex; flex-wrap: wrap; gap: var(--s1); margin-top: var(--s2); }
 
-/* Hero (#hero): name, one-line description and main buttons */
+/* Hero (#hero): name, one-line description, main buttons and photo */
 #hero { padding-top: var(--s3); }
 .lead { font-size: 1.25rem; line-height: 1.5; margin: var(--s2) 0 var(--s1); }
 .looking { color: var(--muted); }
+.hero-grid { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--s3); }
+.portrait {
+  flex: none;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+.contact-email { margin: var(--s2) 0 0; }
 
 /* Cards: flat boxes for experience and education */
 .card-list { display: grid; gap: var(--s2); }
@@ -187,6 +197,8 @@ section { padding-top: var(--s3); }
   .nav-menu { order: 3; width: 100%; }
   .nav-links { gap: 0; }
   .actions .button { flex: 1 1 100%; }
+  .hero-grid { flex-direction: column; gap: var(--s2); }
+  .portrait { order: -1; width: 160px; height: 160px; }
   .sheet { padding: var(--s2); }
 }
 
